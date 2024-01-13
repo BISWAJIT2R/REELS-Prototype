@@ -5,9 +5,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* scroll-behavior: smooth; */
+}
+html {
     scroll-behavior: smooth;
 }
-
 .container {
     position: relative;
     height: 100vh;
@@ -294,6 +296,7 @@
 #works {
     background: #25262A;
     padding: 5vmax;
+    position: relative;
 }
 
 #works .center-box {
@@ -327,6 +330,7 @@
     background: rgba(101, 99, 99, 0.1);
     cursor: pointer;
     transition: 1s;
+    overflow: hidden;
 }
 
 #works .center-box .center-box-left-child .project-box .project-heading-txt-box {
