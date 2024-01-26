@@ -7,24 +7,30 @@
     box-sizing: border-box;
     /* scroll-behavior: smooth; */
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 .container {
     position: relative;
     height: 100vh;
     width: 100%;
     max-width: 100vw;
-    background-image: linear-gradient(120deg,#1e1e20, #222328);
+    background-image: linear-gradient(120deg, #1e1e20, #222328);
     padding: 0px 5vmax 0px 5vmax;
     overflow: hidden;
+}
+
+.hide,
+.popupCut {
+    display: none;
 }
 
 .container .Header {
     height: 80px;
     width: 100%;
     position: relative;
-   
 }
 
 .display {
@@ -34,24 +40,24 @@ html {
 }
 
 .container .Header .links-box {
-  position: relative;
-  height: 100%;
-  width: 60%;
+    position: relative;
+    height: 100%;
+    width: 60%;
 }
 
 .container .Header .links-box .links-box-child {
     height: 100%;
     width: 60%;
-    position: relative; 
+    position: relative;
 }
 
 .container .Header .links-box .links-box-child .links-item {
-      list-style: none;
-      position: relative;
+    list-style: none;
+    position: relative;
 }
 
 .container .Header .links-box .links-box-child .links-item a {
-    font-size: clamp(1rem, 1.3vw,3rem);
+    font-size: clamp(1rem, 1.3vw, 3rem);
     text-decoration: none;
     color: #fff;
     font-weight: 600;
@@ -60,16 +66,15 @@ html {
 }
 
 .container .Header .links-box .logo {
-    font-size: clamp(1rem, 2vw,3rem);
+    font-size: clamp(1rem, 2vw, 3rem);
     font-family: 'Lemon', serif;
     color: #fff;
 }
 
-.container .Header .social-media-links{
-     position: relative;
-     height: 100%;
-     width: 30%;
-  
+.container .Header .social-media-links {
+    position: relative;
+    height: 100%;
+    width: 30%;
 }
 
 .container .Header .social-media-links .social-media-links-box {
@@ -89,8 +94,8 @@ html {
     align-items: center;
 }
 
-.container .Header .social-media-links .social-media-links-box li  {
-    font-size: clamp(1rem, 1vw,3rem);
+.container .Header .social-media-links .social-media-links-box li {
+    font-size: clamp(1rem, 1vw, 3rem);
     text-decoration: none;
     color: #fff;
     font-weight: 600;
@@ -109,8 +114,9 @@ html {
 }
 
 
- .prev, .next {
-    font-size: clamp(1rem, 1.5vw,3rem);
+.prev,
+.next {
+    font-size: clamp(1rem, 1.5vw, 3rem);
     text-decoration: none;
     font-weight: 600;
     text-transform: capitalize;
@@ -125,7 +131,8 @@ html {
     display: flex;
 }
 
-.container .center-box .center-box-leftchild, .center-box-rightchild {
+.container .center-box .center-box-leftchild,
+.center-box-rightchild {
     height: 100%;
     width: 50%;
     /* background: yellow; */
@@ -156,7 +163,7 @@ html {
     transform: translateX(-50%);
     z-index: 1;
     height: 100%;
-   width: 50%;
+    width: 50%;
 }
 
 .container .center-box .center-box-rightchild .circle {
@@ -175,11 +182,11 @@ html {
 }
 
 .container .center-box .center-box-rightchild .circle2 {
-   height: 20%;
-   width: 20%;
-   position: absolute;
-   background: #0c0c0c;
-   display: flex;
+    height: 20%;
+    width: 20%;
+    position: absolute;
+    background: #0c0c0c;
+    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -188,25 +195,28 @@ html {
     right: 0;
     z-index: 3;
 }
+
 .container .center-box .center-box-rightchild .circle3 {
     height: 10%;
     width: 10%;
     position: absolute;
     background: #0c0c0c;
     display: flex;
-     justify-content: center;
-     align-items: center;
-     border-radius: 50%;
-     bottom: 20%;
-     transform: translate(-50%, -50%);
-     right: 2%;
-     z-index: 3;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    bottom: 20%;
+    transform: translate(-50%, -50%);
+    right: 2%;
+    z-index: 3;
 }
+
 .container .center-box .center-box-rightchild .circle3 img {
     position: relative;
     height: 70%;
     width: 70%;
 }
+
 .container .center-box .center-box-leftchild .center-box-leftchid-content {
     position: absolute;
     width: 80%;
@@ -215,24 +225,24 @@ html {
 }
 
 .container .center-box .center-box-leftchild .center-box-leftchid-content .bg-color-txt {
-    font-size: clamp(1rem,1.5vw ,3rem);
+    font-size: clamp(1rem, 1.5vw, 3rem);
     color: #000;
     margin-bottom: 3%;
     font-family: 'Roboto Slab', serif;
     background: #6EF3A5;
     display: inline-block;
-   padding: 5px;
+    padding: 5px;
 }
 
 .container .center-box .center-box-leftchild .center-box-leftchid-content .main-txt {
-    font-size: clamp(1rem, 3vw,3rem);
+    font-size: clamp(1rem, 3vw, 3rem);
     color: #fff;
     margin-bottom: 1%;
     font-family: 'Roboto Slab', serif;
 }
 
 .container .center-box .center-box-leftchild .center-box-leftchid-content .light-txt-info {
-    font-size: clamp(1rem, 1vw,3rem);
+    font-size: clamp(1rem, 1vw, 3rem);
     color: #fff;
     margin-top: 5%;
     font-family: 'Roboto Slab', serif;
@@ -245,12 +255,12 @@ html {
 }
 
 .container .center-box .center-box-leftchild .center-box-leftchid-content .btn-box .btn-box-child {
-    font-size: clamp(1rem,2vw ,3rem);
+    font-size: clamp(1rem, 2vw, 3rem);
     font-family: 'Roboto Slab', serif;
     text-decoration: underline;
     text-transform: uppercase;
     word-spacing: 2px;
-   color: #6EF3A5;
+    color: #6EF3A5;
 }
 
 .container .center-box .center-box-leftchild .experience-box {
@@ -261,7 +271,8 @@ html {
     color: #fff;
 }
 
-.container .center-box .center-box-leftchild .experience-box .expreience-box-left-child, .expreience-box-right-child {
+.container .center-box .center-box-leftchild .experience-box .expreience-box-left-child,
+.expreience-box-right-child {
     position: relative;
     height: 100%;
     width: 45%;
@@ -271,14 +282,14 @@ html {
 }
 
 .container .center-box .center-box-leftchild .experience-box .number {
-    font-size: clamp(1rem, 3vw,3rem);
+    font-size: clamp(1rem, 3vw, 3rem);
     font-family: 'Roboto Slab', serif;
     color: #fff;
     display: block;
 }
 
-.container .center-box .center-box-leftchild .experience-box .text-box p{
-    font-size: clamp(1rem, 1.2vw,3rem);
+.container .center-box .center-box-leftchild .experience-box .text-box p {
+    font-size: clamp(1rem, 1.2vw, 3rem);
     font-family: 'Roboto Slab', serif;
     color: #fff;
     opacity: .4;
@@ -300,7 +311,7 @@ html {
 }
 
 #works .center-box {
-    
+
     position: relative;
     height: 100%;
     width: 100%;
@@ -308,7 +319,8 @@ html {
     justify-content: space-between;
 }
 
-#works .center-box .center-box-left-child, .center-box-right-child {
+#works .center-box .center-box-left-child,
+.center-box-right-child {
     position: relative;
     height: 100%;
     width: 50%;
@@ -339,54 +351,54 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: clamp(1rem, 1.2vw ,3rem);
+    font-size: clamp(1rem, 1.2vw, 3rem);
     font-family: 'Roboto Slab', serif;
     color: #6EF3A5;
     margin-bottom: 1%;
 }
 
 .project-heading-txt-box i {
-    font-size: clamp(1rem, 1.5vw,3rem);
+    font-size: clamp(1rem, 1.5vw, 3rem);
     color: #6EF3A5;
 }
 
 .project-box .project-info-txt {
-    font-size: clamp(1rem, 1vw,3rem);
+    font-size: clamp(1rem, 1vw, 3rem);
     font-family: 'Roboto Slab', serif;
     color: #fff;
-    opacity:.4;
+    opacity: .4;
     margin-bottom: 5%;
 }
 
 .project-box .project-btn {
     text-decoration: none;
-    font-size: clamp(.5rem, 1vw,1rem);
+    font-size: clamp(.5rem, 1vw, 1rem);
     font-family: 'Roboto Slab', serif;
     color: #fff;
 }
 
-.project-box:hover > .project-btn-box .project-btn {
-   text-decoration: underline;
+.project-box:hover>.project-btn-box .project-btn {
+    text-decoration: underline;
 }
 
 .project-box:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 0px #1e1e20, 0px  0px 5px  #1e1e20 , 0px 0px  15px #1e1e20, 0px 0px 18px #1e1e20;
+    box-shadow: 0px 0px 0px #1e1e20, 0px 0px 5px #1e1e20, 0px 0px 15px #1e1e20, 0px 0px 18px #1e1e20;
 }
 
 .center-box .center-box-right-child {
-  padding-right: 15%;
+    padding-right: 15%;
 }
 
 .center-box .center-box-right-child .header-txt {
-    font-size: clamp(1rem, 1.2vw,3rem);
+    font-size: clamp(1rem, 1.2vw, 3rem);
     font-family: 'Roboto Slab', serif;
-    color: #6EF3A5;
+    color: #6ef3a5;
     margin-bottom: 4%;
 }
 
 .center-box .center-box-right-child .brand-txt {
-    font-size: clamp(1rem, 5vw,3rem);
+    font-size: clamp(1rem, 5vw, 3rem);
     /* font-family: 'Roboto Slab', serif; */
     font-family: 'Lemon', serif;
     color: #fff;
@@ -394,14 +406,14 @@ html {
 }
 
 .center-box .center-box-right-child .sub-brand-txt {
-    font-size: clamp(1rem, 1.5vw,3rem);
+    font-size: clamp(1rem, 1.5vw, 3rem);
     font-family: 'Roboto Slab', serif;
     color: #f5f5f5;
     margin-bottom: 14%;
 }
 
 .center-box .center-box-right-child .brand-info {
-    font-size: clamp(1rem, 1.2vw,3rem);
+    font-size: clamp(1rem, 1.2vw, 3rem);
     font-family: 'Roboto Slab', serif;
     color: #fff;
     /* margin-bottom: 4%; */
@@ -409,6 +421,5 @@ html {
 }
 
 body::-webkit-scrollbar {
-   display: none;
+    display: none;
 }
-

@@ -1,6 +1,4 @@
 
-
-
 const tl = gsap.timeline()
 
 tl.from(".Header .links-box .logo, .Header .links-box .links-box-child .links-item, .Header .social-media-links .social-media-links-box .social-links", {
