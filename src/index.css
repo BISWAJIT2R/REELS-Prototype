@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Rubik+Mono+One&family=Tangerine:wght@400;700&family=Teko:wght@300..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-img {
+    background-image: linear-gradient(to right, #ffb80c,#ffb80c,#dfad39, #ffab4f, #ffa57a, #ffa69d, #ffadb8, #fbaac2, #f5a8cd, #eba8d8, #d79ee1, #ba97eb, #8f93f4,#4691fa,#4691fa, #4691fa);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.nav-height {
+    height: calc(100vh - 6rem);
+}
+

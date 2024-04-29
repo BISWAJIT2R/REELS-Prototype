@@ -1,9 +1,17 @@
-// import React from 'react'
+
+
+import PageOut from "./PageOut";
 
 function AppLayout() {
+ 
+
   return (
-    <div>AppLayout</div>
-  )
+    <>
+      <PageOut>
+         
+      </PageOut>
+    </>
+  );
 }
 
-export default AppLayout
+export default AppLayout;
