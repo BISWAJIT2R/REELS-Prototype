@@ -7,9 +7,7 @@ function AppLayout() {
 
   return (
     <>
-      <PageOut>
-         
-      </PageOut>
+        <PageOut/>
     </>
   );
 }

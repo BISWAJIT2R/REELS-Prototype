@@ -11,8 +11,12 @@ import PageNotFound from "../Pages/PageNotFound"
 import AppLayout from "../ui/AppLayout";
 import NavBar from "../ui/NavBar";
 import homeImg from "../assets/Image/img2.png"
+import hacker from "../assets/Image/Evil Hacker.jpeg"
+import img3 from "../assets/Image/download.jpeg"
+import funny from "../assets/Image/download (2).jpeg"
 
 export default homeImg;
+export {hacker, img3,  funny};
 export  {Home, About, PageNotFound,Portfolio,Contact,  AppLayout, NavBar};
 
 export const TabLinks = [ "home", "about","portfolio","contact"];
