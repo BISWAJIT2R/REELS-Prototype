@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import SmoothScroll from "./SmoothScroll";
 import { About, Home, NavBar } from "../utils/index";
+
 function PageOut({ children }) {
   const mainContainer = useRef();
 

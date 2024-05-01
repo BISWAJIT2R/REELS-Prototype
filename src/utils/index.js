@@ -1,8 +1,11 @@
+import { SiScrollreveal } from "react-icons/si";
 import LinkedIn from "../ui/LinkedIn"
 import FaceBook from "../ui/FaceBook"
 import Twitter from "../ui/Twitter"
 import Github from "../ui/Github"
-
+import Header from "../ui/About/Skils/Header";
+import HelpBox from "../ui/About/Skils/HelpBox";
+import Hero from "../ui/About/Hero";
 import Home from "../Pages/Home"
 import About from "../Pages/About"
 import Portfolio from "../Pages/Portfolio"
@@ -18,7 +21,7 @@ import funny from "../assets/Image/download (2).jpeg"
 export default homeImg;
 export {hacker, img3,  funny};
 export  {Home, About, PageNotFound,Portfolio,Contact,  AppLayout, NavBar};
-
+export {SiScrollreveal};
 export const TabLinks = [ "home", "about","portfolio","contact"];
 export const icons = [{"to":"", "Element": LinkedIn},{"to":"", "Element": FaceBook},{"to":"", "Element": Twitter},{"to":"", "Element": Github},]
 
@@ -57,3 +60,5 @@ export const midVarient = {
         background: "#fff",
     }
 }
+
+export {Header, HelpBox, Hero};

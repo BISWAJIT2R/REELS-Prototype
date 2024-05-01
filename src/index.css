@@ -14,3 +14,17 @@
     height: calc(100vh - 6rem);
 }
 
+.head .char {
+    transform: translateY(118px);
+    transition: transform .5s;
+}
+
+.head {
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.sub h1 .char {
+    transform: translateY(118px);
+    transition: transform .5s;
+}

@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
-    "@studio-freight/react-lenis": "^0.0.47",
     "framer-motion": "^11.1.7",
     "gsap": "^3.12.5",
+    "lenis": "^1.0.45",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.1.0",
