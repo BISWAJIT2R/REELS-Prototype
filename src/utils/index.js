@@ -16,8 +16,12 @@ import NavBar from "../ui/NavBar";
 import homeImg from "../assets/Image/img2.png"
 import hacker from "../assets/Image/Evil Hacker.jpeg"
 import img3 from "../assets/Image/download.jpeg"
-import funny from "../assets/Image/download (2).jpeg"
-
+import funny from "../assets/Image/download (2).jpeg";
+import HtmlSvg from  "../assets/SVG/html-1.svg";
+import Js from  "../assets/SVG/logo-javascript.svg";
+import tailwindsvg from  "../assets/SVG/tailwindcss.svg";
+import react from  "../assets/SVG/react-2.svg";
+import Node from  "../assets/SVG/nodejs-3.svg";
 export default homeImg;
 export {hacker, img3,  funny};
 export  {Home, About, PageNotFound,Portfolio,Contact,  AppLayout, NavBar};
@@ -25,6 +29,9 @@ export {SiScrollreveal};
 export const TabLinks = [ "home", "about","portfolio","contact"];
 export const icons = [{"to":"", "Element": LinkedIn},{"to":"", "Element": FaceBook},{"to":"", "Element": Twitter},{"to":"", "Element": Github},]
 
+// Time line
+export const timeLine = [{Date:"2022-2025", content: "Bachelor of Computer Applications (BCA) || MAULANA ABUL KALAM AZAD UNIVERSITY OF TECHNOLOGY, WEST BENGAL", YGPA: "8.9"}, {Date : "2020-2022", content: "XII (WBCHSE) || RAJANGAR UNION HIGH SCHOOL (H.S), WEST BENGAL", YGPA: "83.4%"}]
+// end time line
 export const topVarient = {
     closed: {
         rotate: 0,
@@ -62,3 +69,5 @@ export const midVarient = {
 }
 
 export {Header, HelpBox, Hero};
+
+export {HtmlSvg, tailwindsvg,react, Node, Js}

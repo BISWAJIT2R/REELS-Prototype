@@ -3,25 +3,63 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
-
-import {Header, HelpBox, Hero} from "../utils/index"
+import Part2 from "../ui/About/ui/Part2";
+import Part3 from "../ui/About/ui/Part3";
+import { Header, HelpBox, Hero } from "../utils/index";
+import TechStack from "../ui/About/Skils/TechStack";
+import Timline from "../ui/About/Skils/Timline";
 gsap.registerPlugin(ScrollTrigger);
 
 function About() {
   const container = useRef();
   const TextBox = useRef();
-
+  const HelpBox = useRef();
   useGSAP(
     () => {
       function animateBasedOnSize() {
         if (window.innerWidth < 768) {
           // Mobile animation
-          gsap.from(".sub", {
-            scale: 0,
-            rotation: 360,
-            duration: 2,
-            ease: "power1.out",
+          const timelineOnMobile = gsap.timeline({
+            delay: 0.5,
+            scrollTrigger: {
+              trigger: ".part2",
+              // markers: true,
+              start: "10% 10%",
+              end: "200% 50%",
+              scrub: 2,
+              pin: true,
+            },
           });
+          // part2 start here
+          const part2Heading = new SplitType(".content-heding", { types: "chars" })
+          timelineOnMobile.from(part2Heading.chars, {
+            // translateY: -180,
+            scale: 0,
+            opacity: 0.7,
+            duration: .2,
+            // onComplete: ()=> {
+            //   gsap.set
+            // }
+          })
+          gsap.set(".anime-box", { scale: 0 })
+           
+          timelineOnMobile.from(".card", {
+            scaleX: 0,
+            stagger:0.2
+          })
+          const cardH1 = new SplitType(".card-h1", { types: "chars" })
+        
+          timelineOnMobile.from(cardH1.chars, {
+            y: -100,
+            stagger: 0.2
+          })
+          const cardP = new SplitType(".card-p", { types: "words" })
+          timelineOnMobile.from(cardP.words, {
+            y: 120,
+            opacity:0.3,
+            stagger: 0.5
+          })
+          // part2 end here
         } else {
           // Desktop animation
           const textHeading1 = new SplitType(".head", { types: "chars" });
@@ -49,6 +87,7 @@ function About() {
             delay: 0.6,
             duration: 0.1,
           });
+
           if (TextBox.current) {
             const items = TextBox.current.querySelectorAll("h1");
             items.forEach((item) => {
@@ -62,24 +101,88 @@ function About() {
               });
             });
           }
+
+          // ^ part2 start here 
+          const timelineOnDesktop = gsap.timeline({
+            delay: 0.5,
+            scrollTrigger: {
+              trigger: ".part2",
+              // markers: true,
+              start: "10% 10%",
+              end: "200% 50%",
+              scrub: 2,
+              pin: true,
+            },
+          });
+
+          const part2Heading = new SplitType(".content-heding", { types: "chars" })
+          timelineOnDesktop.from(part2Heading.chars, {
+            // translateY: -180,
+            opacity: 0,
+            // duration: 0.5,
+            stagger: 0.5
+            // onComplete: ()=> {
+            //   gsap.set
+            // }
+          })
+          gsap.set(".anime-box", { scale: 0 })
+           
+          timelineOnDesktop.from(".card", {
+            scaleX: 0,
+            stagger:0.55
+          })
+          const cardH1 = new SplitType(".card-h1", { types: "chars" })
+        
+          timelineOnDesktop.from(cardH1.chars, {
+            y: -100,
+            stagger: 0.2
+          })
+          const cardP = new SplitType(".card-p", { types: "chars" })
+          timelineOnDesktop.from(cardP.chars, {
+            opacity:0.1,
+            stagger: 0.5
+          })
+
+          // endHere
+          // part3 
+          const part3OnDesktop = gsap.timeline({
+            delay: 0.5,
+            scrollTrigger: {
+              trigger: ".part3",
+              markers: true,
+              start: "20% 10%",
+              end: "250% 50%",
+              scrub: 2,
+              pin: true,
+            },
+          });
+          const part3H1 = new SplitType(".part3-h1", { types: "chars" })
+
+          part3OnDesktop.from(part3H1.chars, {
+            x:100,
+            stagger:0.2
+          })
+          part3OnDesktop.to(".timeline", {
+            Y:"-100%",
+            // stagger:0.2
+          })
         }
       }
 
       animateBasedOnSize();
       window.addEventListener("resize", animateBasedOnSize);
-      return window.removeEventListener("resize", animateBasedOnSize);
+      return () => {
+        window.removeEventListener("resize", animateBasedOnSize);
+      };
     },
     { dependencies: [], scope: container }
   );
   return (
     <>
       <div ref={container} className="h-full w-full">
-       <Hero TextBox={TextBox}/>
-        <div className="boxXy h-screen w-full  px-5 bg-[#E9EAEB] md:px-28 md:py-20 xl:py-5">
-           <Header/>
-           <HelpBox/>
-        </div>
-        <div className="box3 h-screen w-full bg-slate-500"></div>
+        <Hero TextBox={TextBox} />
+        <Part2 />
+        <Part3 />
       </div>
     </>
   );

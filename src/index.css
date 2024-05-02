@@ -24,7 +24,11 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.sub h1 .char {
+/* .sub h1 .char {
     transform: translateY(118px);
     transition: transform .5s;
+} */
+
+.grid-box >  div {
+    border: 2px solid orange;
 }
