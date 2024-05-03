@@ -2,7 +2,9 @@
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <div className=" h-full w-full relative bg-black ">
+        
+    </div>
   )
 }
 

@@ -18,7 +18,27 @@ function About() {
     () => {
       function animateBasedOnSize() {
         if (window.innerWidth < 768) {
+
           // Mobile animation
+          // partone here 
+          const heroBox = gsap.timeline({
+            delay: 0.5,
+            scrollTrigger: {
+              trigger: ".hero",
+              // markers: true,
+              start: "12% 10%",
+              end: "200% 50%",
+              scrub: 2,
+              pin: true,
+            },
+          });
+          const bio = new SplitType(".sub", { types: "chars" })
+          heroBox.from(bio.chars, {
+            scale: 1.2,
+            opacity:0.1,
+            stagger: 0.5
+          })
+           // part2 start here
           const timelineOnMobile = gsap.timeline({
             delay: 0.5,
             scrollTrigger: {
@@ -30,7 +50,7 @@ function About() {
               pin: true,
             },
           });
-          // part2 start here
+         
           const part2Heading = new SplitType(".content-heding", { types: "chars" })
           timelineOnMobile.from(part2Heading.chars, {
             // translateY: -180,
@@ -60,6 +80,31 @@ function About() {
             stagger: 0.5
           })
           // part2 end here
+          // part3 here 
+          const part3OnMobile = gsap.timeline({
+            delay: 0.5,
+            scrollTrigger: {
+              trigger: ".part3",
+              // markers: true,
+              start: "top 10%",
+              end: "300% 50%",
+              scrub: 2,
+              pin: true,
+            },
+          });
+          const part3H1 = new SplitType(".part3-h1", { types: "chars" })
+
+          part3OnMobile.from(part3H1.chars, {
+            y:100,
+            opacity:0,
+            stagger:0.2
+          })
+          part3OnMobile.from(".timeline", {
+            y:100,
+            opacity: 0
+            // stagger:0.2
+          })
+          // part3 end here
         } else {
           // Desktop animation
           const textHeading1 = new SplitType(".head", { types: "chars" });
@@ -149,9 +194,9 @@ function About() {
             delay: 0.5,
             scrollTrigger: {
               trigger: ".part3",
-              markers: true,
+              // markers: true,
               start: "20% 10%",
-              end: "250% 50%",
+              end: "300% 50%",
               scrub: 2,
               pin: true,
             },
@@ -159,11 +204,13 @@ function About() {
           const part3H1 = new SplitType(".part3-h1", { types: "chars" })
 
           part3OnDesktop.from(part3H1.chars, {
-            x:100,
+            y:100,
+            opacity:0,
             stagger:0.2
           })
-          part3OnDesktop.to(".timeline", {
-            Y:"-100%",
+          part3OnDesktop.from(".timeline", {
+            y:100,
+            opacity: 0
             // stagger:0.2
           })
         }
