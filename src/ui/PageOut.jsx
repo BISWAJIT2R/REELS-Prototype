@@ -26,7 +26,6 @@ function PageOut({ children }) {
   );
   const location = useLocation();
   let pathName = location.pathname;
-  console.log(pathName);
   return (
     <AnimatePresence mode="wait">
       <div

@@ -13,9 +13,9 @@ function Hero({TextBox}) {
           </h1>
           <div
             ref={TextBox}
-            className="sub font-primary text-xl  mt-2 md:text-xl mxl:text-2xl xl:mt-10 overflow-hidden"
+            className="sub font-primary sm:font-sign text-xl  mt-2 md:text-xl xl:text-2xl xl:mt-10 overflow-hidden "
           >
-            <h1 className=" relative inline md:inline-block md:text-3xl md:mb-3 overflow-hidden  xl:block  xl:font-semibold ">
+            <h1 className=" relative inline md:inline-block md:text-3xl md:mb-3 overflow-hidden  xl:block  xl:font-semibold xl:text-[3rem] ">
               {" "}
               Hi, I’m{" "}
               <strong className="font-secondary text-2xl bg-img  md:text-4xl xl:text-3xl">
@@ -24,7 +24,7 @@ function Hero({TextBox}) {
               , a frontend developer with a passion for creating engaging,
               efficient, and user-friendly digital interfaces.
             </h1>{" "}
-            <h1 className=" inline md:inline-block md:text-3xl md:mb-3 overflow-hidden xl:block xl:font-extrabold">
+            <h1 className=" inline md:inline-block md:text-3xl md:mb-3 overflow-hidden xl:block xl:font-extrabold xl:text-[3rem]">
               {" "}
               With{" "}
               <strong className="font-secondary text-2xl bg-img  md:text-4xl xl:text-3xl">
@@ -35,15 +35,15 @@ function Hero({TextBox}) {
                 HTML5, CSS3, JavaScript, React, Next.js, Three.js .
               </strong>
             </h1>{" "}
-            <h1 className=" inline md:inline-block md:text-3xl md:mb-3 xl:block xl:font-extrabold overflow-hidden">
+            <h1 className=" inline md:inline-block md:text-3xl md:mb-3 xl:block xl:font-extrabold xl:text-[3rem] overflow-hidden">
               I focus on translating design concepts into functional and
               aesthetically pleasing web applications.
             </h1>{" "}
-            <h1 className=" inline md:inline-block md:text-3xl md:mb-3 overflow-hidden xl:block xl:font-extrabold">
+            <h1 className=" inline md:inline-block md:text-3xl md:mb-3 overflow-hidden xl:block xl:font-extrabold xl:text-[3rem]">
               My goal is to improve user experiences by making websites not only
               visually appealing but also accessible and easy to navigate.
             </h1>{" "}
-            <h1 className=" inline md:inline-block md:text-3xl md:mb-3 overflow-hidden xl:block xl:font-extrabold">
+            <h1 className=" inline md:inline-block md:text-3xl md:mb-3 overflow-hidden xl:block xl:font-extrabold xl:text-[3rem]">
               I’m always eager to take on new challenges and stay updated with
               the latest trends in web technologies.
             </h1>

@@ -10,7 +10,6 @@ import useDefaultType from "../helper/Hooks";
 function NavBar() {
   const [open, setOpen] = useState(false);
   const deviceType = useDefaultType();
-  console.log(deviceType);
   return (
     <header className="h-full w-full px-4 flex items-center justify-between md:px-12 xl:px-16">
       <h1 className="logo text-4xl font-bold font-sign">Biswajit</h1>
