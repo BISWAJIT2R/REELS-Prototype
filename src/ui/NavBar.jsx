@@ -37,9 +37,9 @@ function NavBar() {
       )}
       <div className="hidden  md:block ">
         <ul className="flex justify-between items-center gap-12 text-xl cursor-pointer ">
-          {icons.map((link, i) => (
-            <Link key={i} herf={link.to}>
-              <link.Element />
+          {icons.map(({to, Element}, i) => (
+            <Link key={i} to={to}>
+              <Element />
             </Link>
           ))}
         </ul>

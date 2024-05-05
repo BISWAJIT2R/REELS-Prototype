@@ -28,10 +28,10 @@ export { Home, About, PageNotFound, Portfolio, Contact, AppLayout, NavBar };
 export { SiScrollreveal };
 export const TabLinks = ["home", "about", "portfolio", "contact"];
 export const icons = [
-  { to: "", Element: LinkedIn },
-  { to: "", Element: FaceBook },
+  { to: "https://www.linkedin.com/in/dasbiswajit", Element: LinkedIn },
+  { to: "https://www.facebook.com/profile.php?id=100045281074195&mibextid=ZbWKwL", Element: FaceBook },
   { to: "", Element: Twitter },
-  { to: "", Element: Github },
+  { to: "https://github.com/BISWAJIT2R", Element: Github },
 ];
 
 // Time line

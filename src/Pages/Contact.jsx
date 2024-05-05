@@ -26,7 +26,7 @@ function Contact() {
     }, "a2")
 
     if (formContainer.current) {
-      console.clear()
+     
      const p =formContainer.current.querySelectorAll("p");
      const inputTag =formContainer.current.querySelectorAll("input");
       p.forEach((elem) => {

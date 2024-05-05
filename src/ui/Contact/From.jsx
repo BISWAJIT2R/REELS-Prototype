@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
-
+import { insertData } from "../../helper/Backend";
+import { toast } from 'react-toastify';
 function From({containerBox}) {
   const {
     handleSubmit,
@@ -7,13 +8,13 @@ function From({containerBox}) {
     formState: { errors },
   } = useForm();
   // console.log(x);
-
+ 
   function onSubmit(data) {
-    console.log(data);
+    insertData(data)
   }
 
   function onError (data) {
-    alert("Please")
+    toast.error("please Enter all details")
   }
 
   return (
